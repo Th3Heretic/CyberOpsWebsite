@@ -57,3 +57,57 @@ body {
 h2 {
   color: #ff6600;
 }
+
+/* Add spacing after the banner */
+.banner + .content {
+    margin-top: 200px;
+}
+
+/* Style for the h1 title */
+h1 {
+    text-decoration: underline;
+    color: #00ff00;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+/* First text block spanning the width */
+.intro-text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 0 50px;
+}
+
+/* Flex container for alternating text and image */
+.content-section {
+    display: flex;        /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox */
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin: 20px 0;
+    opacity: 0; /* Initially hidden for fade-in effect - https://developer.mozilla.org/en-US/docs/Web/CSS/opacity*/
+    transition: opacity 1s ease-in;   /* https://developer.mozilla.org/en-US/docs/Web/CSS/transition */
+}
+
+/* Image styling */
+.content-section img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+/* Text container */
+.content-section p {
+     width: 55%;
+    line-height: 1.6;
+}
+
+/* Reversing the order for alternating images */
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Scroll fade-in effect */
+.fade-in {
+    opacity: 1;
+}

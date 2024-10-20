@@ -5,36 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Missions</title>
   <link rel="stylesheet" href="../styles.css">
-  <style>
-    /* Flex container for the image and paragraph alignment */
-    .content-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px;
-      margin: 20px 0;
-    }
-
-    /* Image styling */
-    .content-section img {
-      width: 40%; /* Adjust this to change the image size */
-      border-radius: 10px;
-    }
-
-    /* Text container */
-    .content-section p {
-      width: 55%; /* Ensures text takes up most of the space */
-      line-height: 1.6;
-    }
-
-    /* Reversing the order for the second section */
-    .content-section.reverse {
-      flex-direction: row-reverse;
-    }
-    </style>
-    </head>
+</head>
 <body>
-  <!-- Banner with 5 buttons -->
+
+  <!-- Banner Navigation -->
   <div class="banner">
     <a href="home.html"><button class="nav-btn">Home</button></a>
     <a href="missions.html"><button class="nav-btn">Missions</button></a>
@@ -42,26 +16,67 @@
     <a href="profile.html"><button class="nav-btn">Profile</button></a>
     <a href="settings.html"><button class="nav-btn">Settings</button></a>
   </div>
-  
-<!-- Mission Statement Section 1 with image and paragraph -->
-  <div class="content-section">
-    <img src="path_to_image1.jpg" alt="Image description 1">
-    <p>
-      At <strong>Cyber Ops: Hacker Simulator</strong>, our mission is to immerse players in the high-stakes world of cyber warfare, blending realism with engaging gameplay to create a hacking experience like no other. Our vision is to push the boundaries of simulation by providing an authentic, yet accessible hacking environment where players can:
-      <ul>
-        <li>Master complex systems.</li>
-        <li>Engage in meaningful decisions.</li>
-        <li>Evolve with technology.</li>
-      </ul>
-    </p>
+
+  <!-- Main content -->
+  <div class="content">
+    
+    <!-- Title -->
+    <h1>Our vision for Cyber Ops: Hacker Simulator</h1>
+
+    <!-- First block of text -->
+    <div class="intro-text">
+      <p>At <strong>Cyber Ops: Hacker Simulator</strong>, our mission is to immerse players in the high-stakes 
+          world of cyber warfare, blending realism with engaging gameplay to create a hacking experience like no 
+          other. Our vision is to push the boundaries of simulation by providing an authentic, yet accessible 
+          hacking environment where players can master complex systems, engage in meaningful decisions, and 
+          evolve with technology.</p>
+    </div>
+
+    <!-- Alternating text and images -->
+    <div class="content-section">
+      <img src="path_to_image1.jpg" alt="Image description 1">
+      <p>Master complex systems: We aim to create a fully interactive network-based simulation, empowering players 
+          to think critically, adapt to evolving challenges, and exploit security weaknesses with precision.</p>
+    </div>
+
+    <div class="content-section reverse">
+      <p>Engage in meaningful decisions: Every mission will challenge players to make tactical choices that impact 
+          both the immediate scenario and the overall narrative, adding layers of strategy and depth to the gameplay.</p>
+      <img src="path_to_image2.jpg" alt="Image description 2">
+    </div>
+
+    <div class="content-section">
+      <img src="path_to_image3.jpg" alt="Image description 3">
+      <p>Evolve with technology: As real-world hacking methods and technologies evolve, so will our game. We are 
+          committed to keeping the gameplay experience dynamic by incorporating the latest in cybersecurity trends, 
+          tools, and challenges.</p>
+    </div>
+
+    <div class="content-section reverse">
+      <p>Moving forward, we see Cyber Ops becoming a platform where players can not only play through scripted 
+          scenarios but also build and test their own simulations. This reflects our belief that true mastery of 
+          hacking requires not just following pre-made paths but innovating and adapting in real-time.</p>
+      <img src="path_to_image4.jpg" alt="Image description 4">
+    </div>
+
   </div>
 
-  <!-- Mission Statement Section 2 with reversed layout -->
-  <div class="content-section reverse">
-    <p>
-      Moving forward, we see <strong>Cyber Ops</strong> becoming a platform where players can not only play through scripted scenarios but also build and test their own simulations. This reflects our belief that true mastery of hacking requires not just following pre-made paths but innovating and adapting in real-time.
-    </p>
-    <img src="path_to_image2.jpg" alt="Image description 2">
-  </div>
+  <script>
+    // Function to handle fade-in effect
+    function fadeInElements() {
+      const elements = document.querySelectorAll('.content-section');
+      const windowHeight = window.innerHeight;
+
+      elements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;      /* https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect */
+        if (elementTop < windowHeight - windowHeight / 4) {
+          el.classList.add('fade-in');
+        }
+      });
+    }
+
+    // Call the fadeInElements function on scroll - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+    window.addEventListener('scroll', fadeInElements);          /* https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event */
+  </script>
 </body>
 </html>
