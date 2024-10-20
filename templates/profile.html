@@ -1,19 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Ops: Profile</title>
-  <link rel="stylesheet" href="../styles.css"> <!-- Linking external CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Ops: Profile</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+    /* Additional styling for profile page */  
+    .profile-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: justify;
+        line-height: 1.8;
+    }
+
+    /* Styling for headings with grey background */  
+    h1, h2 {
+        text-align: center;
+        background-color: rgba(50, 50, 50, 0.7); /* Grey background with slight transparency */
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block; /* Makes the background only cover the text */
+    }
+    
+    /* Styling for headings with grey background */
+    h3 {
+        background-color: rgba(50, 50, 50, 0.7); /* Grey background with slight transparency */
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block; /* Makes the background only cover the text */
+    }
+
+    /* Sectioning for background images and alignment choices */
+    .alignment {
+        padding: 40px 20px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
+        border-radius: 10px;
+    }
+    
+    /* Background image for the Profile section */
+    .profile-background {
+        padding: 60px 20px;
+        background-image: url('../img/ProfileBackground.jpeg');  /* Replace with actual path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+    }
+    
+        /* Text visibility */
+    .profile-background p {
+        background-color: rgba(0, 0, 0, 0.6); /* Adding slight opacity to improve readability */
+        padding: 20px;
+    }
+
+    /* Background images for specific alignments */
+    .black-hat {
+        background-image: url('../img/BlackHat.jpeg');  /* Replace with actual path */
+    }
+
+    .white-hat {
+        background-image: url('../img/WhiteHat.jpeg');  /* Replace with actual path */
+    }
+
+    .grey-hat {
+        background-image: url('../img/GreyHat.jpeg');   /* Replace with actual path */
+    }
+
+    /* Text visibility */
+    .alignment p {
+        background-color: rgba(0, 0, 0, 0.5); /* Adding slight opacity to improve readability */
+        padding: 20px;
+    }
+  
+  </style>
 </head>
 <body>
-  <!-- Banner with 5 buttons -->
+
+  <!-- Banner Navigation -->
   <div class="banner">
-    <a href="home.html"><button class="nav-btn">Home</button></a>
-    <a href="missions.html"><button class="nav-btn">Missions</button></a>
-    <a href="tools.html"><button class="nav-btn">Tools</button></a>
-    <a href="profile.html"><button class="nav-btn">Profile</button></a>
-    <a href="settings.html"><button class="nav-btn">Settings</button></a>
+      <a href="home.html"><button class="nav-btn">Home</button></a>
+      <a href="ourmission.html"><button class="nav-btn">Our Mission</button></a>
+      <a href="tools.html"><button class="nav-btn">Tools</button></a>
+      <a href="profile.html"><button class="nav-btn">Profile</button></a>
+      <a href="settings.html"><button class="nav-btn">Settings</button></a>
   </div>
+
+  <!-- Profile Content -->
+  <div class="profile-container">
+    
+    <!-- Character Background with image -->
+      <div class="profile-background">
+          <h1>Profile</h1>
+          <p><strong>Placeholder Name</strong> was once a senior consultant at a successful cybersecurity firm. 
+          Specializing in red teaming and penetration testing, he was at the top of his game. But everything crumbled 
+          when the firm unexpectedly went bust due to corporate mismanagement. Now, with no safety net or financial 
+          backup, all he has are the skills he’s honed over years of working in the shadows of the digital world and 
+          the clothes on his back. He's determined to rise again, but how he chooses to do that is up to you.</p>
+    </div>
+
+    <!-- Moral Alignments -->
+      <div class="alignment black-hat">
+          <h3>Black Hat</h3>
+          <p>Will you use your skills for personal gain? As a Black Hat, you'll hack for profit and power, taking 
+          down corporations, leaking sensitive information, and building a criminal empire in the digital shadows. 
+          You might gain wealth and control, but at the cost of becoming a target for law enforcement and rival hackers.</p>
+    </div>
+      
+      <div class="alignment white-hat">
+          <h3>White Hat</h3>
+          <p>As a White Hat, you fight for justice. Aligning yourself with law enforcement, ethical hackers, and NGOs, 
+          you’ll expose corruption and defend personal privacy. You’ll be a force for good, but this path is not 
+          without danger — those who profit from the dark side of the digital world won’t take kindly to your interference.</p>
+      </div>
+      
+      <div class="alignment grey-hat">
+          <h3>Grey Hat</h3>
+          <p>Will you walk the line between right and wrong? As a Grey Hat, you use your skills for curiosity and 
+          personal ethics, sometimes working with the law, and other times bending the rules to your will. You’ll 
+          be a wildcard, making enemies on both sides, but also gaining the freedom to shape your destiny as you see fit.</p>
+      </div>
+  
+  </div>
+
 </body>
 </html>
