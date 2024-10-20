@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missions</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Flex container for the image and paragraph alignment */
+    .content-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    /* Image styling */
+    .content-section img {
+      width: 40%; /* Adjust this to change the image size */
+      border-radius: 10px;
+    }
+
+    /* Text container */
+    .content-section p {
+      width: 55%; /* Ensures text takes up most of the space */
+      line-height: 1.6;
+    }
+
+    /* Reversing the order for the second section */
+    .content-section.reverse {
+      flex-direction: row-reverse;
+    }
+    </style>
+    </head>
+<body>
+  <!-- Banner with 5 buttons -->
+  <div class="banner">
+    <a href="home.html"><button class="nav-btn">Home</button></a>
+    <a href="missions.html"><button class="nav-btn">Missions</button></a>
+    <a href="tools.html"><button class="nav-btn">Tools</button></a>
+    <a href="profile.html"><button class="nav-btn">Profile</button></a>
+    <a href="settings.html"><button class="nav-btn">Settings</button></a>
+  </div>
+  
+<!-- Mission Statement Section 1 with image and paragraph -->
+  <div class="content-section">
+    <img src="path_to_image1.jpg" alt="Image description 1">
+    <p>
+      At <strong>Cyber Ops: Hacker Simulator</strong>, our mission is to immerse players in the high-stakes world of cyber warfare, blending realism with engaging gameplay to create a hacking experience like no other. Our vision is to push the boundaries of simulation by providing an authentic, yet accessible hacking environment where players can:
+      <ul>
+        <li>Master complex systems.</li>
+        <li>Engage in meaningful decisions.</li>
+        <li>Evolve with technology.</li>
+      </ul>
+    </p>
+  </div>
+
+  <!-- Mission Statement Section 2 with reversed layout -->
+  <div class="content-section reverse">
+    <p>
+      Moving forward, we see <strong>Cyber Ops</strong> becoming a platform where players can not only play through scripted scenarios but also build and test their own simulations. This reflects our belief that true mastery of hacking requires not just following pre-made paths but innovating and adapting in real-time.
+    </p>
+    <img src="path_to_image2.jpg" alt="Image description 2">
+  </div>
+</body>
+</html>
